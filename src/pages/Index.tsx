@@ -34,7 +34,8 @@ const Index = () => {
       {/* Panels with cross-fade */}
       <div className="flex-1 relative min-h-0">
         <div
-          className="absolute inset-0 transition-opacity duration-[400ms]"
+          className="absolute inset-0 transition-opacity"
+          style={{ opacity: mode === 'perception' ? 1 : 0, pointerEvents: mode === 'perception' ? 'auto' : 'none', transitionDuration: '400ms' }}
           style={{ opacity: mode === 'perception' ? 1 : 0, pointerEvents: mode === 'perception' ? 'auto' : 'none' }}
         >
           <PerceptionPanel currentTime={currentTime} stageId={stageId} />
