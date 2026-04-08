@@ -36,14 +36,12 @@ const Index = () => {
         <div
           className="absolute inset-0 transition-opacity"
           style={{ opacity: mode === 'perception' ? 1 : 0, pointerEvents: mode === 'perception' ? 'auto' : 'none', transitionDuration: '400ms' }}
-          style={{ opacity: mode === 'perception' ? 1 : 0, pointerEvents: mode === 'perception' ? 'auto' : 'none' }}
         >
           <PerceptionPanel currentTime={currentTime} stageId={stageId} />
         </div>
         <div
           className="absolute inset-0 transition-opacity"
           style={{ opacity: mode === 'thinking' ? 1 : 0, pointerEvents: mode === 'thinking' ? 'auto' : 'none', transitionDuration: '400ms' }}
-          style={{ opacity: mode === 'thinking' ? 1 : 0, pointerEvents: mode === 'thinking' ? 'auto' : 'none' }}
         >
           <ThinkingPanel stageId={stageId} currentTime={currentTime} />
         </div>
