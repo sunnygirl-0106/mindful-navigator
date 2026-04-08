@@ -41,7 +41,8 @@ const Index = () => {
           <PerceptionPanel currentTime={currentTime} stageId={stageId} />
         </div>
         <div
-          className="absolute inset-0 transition-opacity duration-[400ms]"
+          className="absolute inset-0 transition-opacity"
+          style={{ opacity: mode === 'thinking' ? 1 : 0, pointerEvents: mode === 'thinking' ? 'auto' : 'none', transitionDuration: '400ms' }}
           style={{ opacity: mode === 'thinking' ? 1 : 0, pointerEvents: mode === 'thinking' ? 'auto' : 'none' }}
         >
           <ThinkingPanel stageId={stageId} currentTime={currentTime} />
